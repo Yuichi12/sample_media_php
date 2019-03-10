@@ -251,9 +251,9 @@ function isLogin(){
 // DB接続関数
 function dbConnect(){
   // DBへの接続準備
-  $dsn = 'mysql:dbname=twitter_practice;host=localhost;charset=utf8';
-  $user = 'root';
-  $password = 'root';
+  $dsn = 'mysql:dbname=sample_php;host=localhost;charset=utf8';
+  $user = 'php_user';
+  $password = 'PHPsample*media1';
   $options = array(
     // SQL実行失敗時にはエラーコードのみ設定
     PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
@@ -610,9 +610,9 @@ function getUserMsgsAndBord($u_id, $currentMinNum = 0, $listSpan = 5){
       foreach ($rst as $key => $val){
         $dealUserData[] = $val['user1_id'];
         $dealUserData[] = $val['user2_id'];
-        debug('$dealUserDataの中身:'. $u_id . print_r($dealUserData, true)); // 一時的なデバッグ
+        
         if (($key_id = array_search($u_id, $dealUserData)) !== false){
-          debug('$key_idの中身:' . print_r($key_id, true)); // 一時的なデバッグ
+          
           unset($dealUserData[$key_id]);
         }
         $partnerUserId = array_shift($dealUserData);
