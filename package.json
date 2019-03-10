@@ -1,0 +1,35 @@
+{
+  "name": "twitter-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-css": "node-sass --include-path src src/scss/style.scss dist/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-progeny": "^0.4.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-uglify": "^3.0.1",
+    "jshint": "^2.9.7",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "bootstrap": "4.2.1",
+    "jquery": "^3.3.1"
+  }
+}

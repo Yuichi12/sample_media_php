@@ -1,0 +1,47 @@
+// ===========================================
+// 変数
+// ===========================================
+
+$font-color_default: #000;
+$font-color_sub1: #111;
+$font-color_sub2: #222;
+
+$color_main: #333;
+$color_sub: #444;
+
+$bg-color_main: #555;
+$bg-color_sub: #666;
+
+$site-width: 98rem;
+
+$font-size_s: 1.2rem;
+$font-size_m: 1.4rem;
+$font-size_default: 1.6rem;
+$font-size_l: 1.8rem;
+$font-size_xl: 2.4rem;
+$font-size_xxl: 3rem;
+$font-size_3l: 3.8rem;
+
+$space_s: 0.5rem;
+$space_m: 1rem;
+$space_l: 1.5rem;
+$space_xl: 2rem;
+$space_xxl: 3rem;
+$space_3l: 4rem;
+
+$font-family_main: sans-serif;
+$font-family_sub: 'Amatic SC',
+cursive;
+
+$breakpoints: ('sm': 'screen and (max-width: 414px)',
+'md': 'screen and (max-width: 768px)',
+'lg': 'screen and (max-width: 980px)',
+'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
