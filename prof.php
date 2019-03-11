@@ -109,15 +109,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
   <div class="container-fluid pt-4">
     <div class="row">
 
-      <aside class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </aside>
+    <?php require('sidebarProf.php'); ?>
 
       <div class="col-md-6">
         <?php if (!empty($dbPostDataList)){ ?>

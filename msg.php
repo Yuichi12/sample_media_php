@@ -22,7 +22,7 @@ $u_id = $_SESSION['user_id'];
 // 画面表示用データ取得
 // ===========================================
 // GETパラメータを取得
-$_GET['m_id'] = 1; // 一時的なデバッグ
+
 $m_id = (!empty($_GET['m_id'])) ? $_GET['m_id'] : '';
 // DBから掲示板とメッセージデータを取得
 $viewData = getMsgsAndBord($m_id);
@@ -123,6 +123,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
       <div class="area-bord">
         <?php if (!empty($viewData)){ ?>
         <?php foreach ($viewData as $key => $val){ ?>
+        <?php if($val['message']){ ?>
         <?php if (!empty($val['sender_id']) && $val['sender_id'] == $partnerUserId){ ?>
         <div class="msg-cnt msg-left">
           <div class="avatar-wrapper">
@@ -147,6 +148,9 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             <?php echo sanitize($val['send_date']); ?>
           </div>
         </div><!-- msg-right -->
+        <?php } ?>
+        <?php } else{ ?>
+          <p style="text-align:center">メッセージはまだありません。</p>
         <?php } ?>
         <?php } ?>
         <?php } ?>
