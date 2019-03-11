@@ -9621,6 +9621,10 @@ img {
   text-align: center;
 }
 
+.container-fluid {
+  margin-bottom: 100px;
+}
+
 .is-invalid {
   color: red;
 }
