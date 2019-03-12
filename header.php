@@ -1,6 +1,6 @@
 <header class="globalNav">
   
-  <a href="index.php" class="logo-link">記事投稿サイト</a>
+  <a href="index.php" class="logo-link  <?php echo (basename($_SERVER['PHP_SELF']) !== 'index.php') ? 'd-block' : ''; ?>">記事投稿サイト</a>
 
   <div class="overRay js-toggle-bg"></div>
 
