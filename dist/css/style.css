@@ -9815,13 +9815,19 @@ img {
 }
 
 .input-file {
-  height: 300px;
+  height: 250px;
   left: 0;
   opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .input-file {
+    height: 150px;
+  }
 }
 
 .area-drop {
@@ -9837,6 +9843,7 @@ img {
 @media screen and (max-width: 768px) {
   .area-drop {
     height: 156px;
+    line-height: 156px;
     width: 250px;
   }
 }
@@ -9851,6 +9858,7 @@ img {
 @media screen and (max-width: 768px) {
   .area-drop.avatar {
     height: 150px;
+    line-height: 150px;
     width: 150px;
   }
 }
@@ -9860,6 +9868,14 @@ img {
   height: 250px;
   line-height: 250px;
   width: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  .area-drop.avatar .prev-img {
+    height: 150px;
+    line-height: 150px;
+    width: 150px;
+  }
 }
 
 .prev-img {

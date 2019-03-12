@@ -102,7 +102,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
   <?php require('header.php'); ?>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 offset-2">
+      <div class="col-md-8 offset-md-2">
         <form action="" method="post" class="" enctype="multipart/form-data">
           <div class="area-msg">
             <?php if (!empty($err_msg['common'])) echo $err_msg['common']; ?>
@@ -181,7 +181,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
           </div>
 
           <div class="row mb-5">
-            <div class="imgDrop-container col-md-6">
+            <div class="imgDrop-container col-lg-6">
               アバター画像
               <label class="area-drop avatar">
                 <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
@@ -194,7 +194,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
               </div>
             </div><!-- imgDrop-container -->
 
-            <div class="imgDrop-container col-md-6">
+            <div class="imgDrop-container col-lg-6">
               プロフィール背景画像
               <label class="area-drop profEdit">
                 <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
