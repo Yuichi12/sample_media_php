@@ -9614,8 +9614,22 @@ img {
     transition: all .6s;
     z-index: 2;
   }
+}
+
+@media screen and (max-width: 980px) and (max-width: 768px) {
+  .menu {
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 980px) and (max-width: 414px) {
+  .menu {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 980px) {
   .menu.active {
-    left: 45%;
     top: 30%;
     transition: all .6s;
   }

@@ -46,19 +46,24 @@
 .menu {
   display: flex;
   @include mq(lg){
-    
     flex-direction: column;
     left: 45%;
+    @include mq(md){
+      left: 40%;
+    }
+    @include mq(sm){
+      left: 30%;
+    }
     position: fixed;
     top: -100%;
     transition: all .6s;
     z-index: 2;
     &.active {
-      left: 45%;
       top: 30%;
       transition: all .6s;
     }
   }
+  
   
   &-item {
     margin-right: $space_xl;
