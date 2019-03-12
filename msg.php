@@ -144,10 +144,10 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             <img src="<?php echo sanitize(showImg($myUserInfo['pic1'])); ?>" alt="" class="avatar">
           </div>
           <div class="row">
-          <p class="msg-inrTxt col-md-8 order-2">
+          <p class="msg-inrTxt col-md-8 order-md-2">
             <?php echo sanitize($val['message']); ?>
           </p>
-          <div class="msg-date col-md-3 order-1">
+          <div class="msg-date col-md-3 order-md-1">
             <?php echo sanitize($val['send_date']); ?>
           </div>
           </div>
