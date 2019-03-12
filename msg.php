@@ -130,7 +130,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             <img src="<?php echo sanitize(showImg($partnerUserInfo['pic1'])); ?>" alt="" class="avatar">
           </div>
           <div class="row">
-          <p class="msg-inrTxt col-md-9">
+          <p class="msg-inrTxt col-md-8">
             <?php echo sanitize($val['message']); ?>
           </p>
           <div class="msg-date col-md-3">
@@ -144,10 +144,10 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             <img src="<?php echo sanitize(showImg($myUserInfo['pic1'])); ?>" alt="" class="avatar">
           </div>
           <div class="row">
-          <p class="msg-inrTxt col-md-9">
+          <p class="msg-inrTxt col-md-8 order-2">
             <?php echo sanitize($val['message']); ?>
           </p>
-          <div class="msg-date col-md-3">
+          <div class="msg-date col-md-3 order-1">
             <?php echo sanitize($val['send_date']); ?>
           </div>
           </div>
@@ -161,7 +161,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
       </div><!-- area-bord -->
       <div class="msg-send-area">
         <form action="" method="post">
-          <textarea name="msg" cols="40" rows="5"></textarea>
+          <textarea name="msg" cols="40" rows="5" class="js-count-target"></textarea>
           <div class="js-count-target"><span class="js-count-show">0</span>/300</div>
           <input type="submit" value="送信" class="btn btn-primary msg-send ml-auto">
         </form>
