@@ -108,6 +108,10 @@
     height: 200px;
     position: absolute;
     width: 200px;
+    @include mq(md){
+      height: 150px;
+      width: 150px;
+    }
   }
 
   &-name {

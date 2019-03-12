@@ -9689,6 +9689,13 @@ img {
   width: 200px;
 }
 
+@media screen and (max-width: 768px) {
+  .profBar-img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
 .profBar-name {
   margin-left: 200px;
 }
