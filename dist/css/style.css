@@ -9677,6 +9677,11 @@ img {
   margin-left: 200px;
 }
 
+.container {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
 .container-title {
   margin-top: 70px;
   text-align: center;
