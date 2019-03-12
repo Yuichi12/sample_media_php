@@ -20,31 +20,76 @@
 
 .globalNav {
   align-items: center;
+  background: $color_main;
   display: flex;
-  height: 65px;
+  height: 100px;
   justify-content: space-between;
-  margin-left: $space_3l;
-  margin-right: $space_3l;
+  padding-left: $space_3l;
+  padding-right: $space_3l;
+  padding-top: 7px;
+  width: 100%;
+  @include mq(md){
+    padding-left: $space_m;
+    padding-right: $space_m;
+  }
+  .btn-outline-success {
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+      border: 1px solid #28a745;
+    }
+  }
 }
 
 .menu {
   display: flex;
-
+  @include mq(lg){
+    
+    flex-direction: column;
+    left: 45%;
+    position: fixed;
+    top: -100%;
+    transition: all .6s;
+    z-index: 2;
+    &.active {
+      left: 45%;
+      top: 30%;
+      transition: all .6s;
+    }
+  }
+  
   &-item {
     margin-right: $space_xl;
+    padding-top: 3px;
+    @include mq(lg){
+      margin: 0 auto $space_3l;
+    }
   }
 
   &-link {
-    color: #222;
-
+    color: #fff;
+    font-size: $font-size_s;
+    font-weight: 600;
+    @include mq(lg){
+      color: #000;
+      font-size: $font-size_l;
+    }
+  }
+  &-group {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
-.menu-group {
-  align-items: flex-start;
-  display: flex;
-  justify-content: flex-end;
+.logo-link {
+  color: #fff;
+  font-size: $font-size_l;
+  @include mq(md){
+    display: none;
+  }
 }
+
 
 .profBar {
   height: 65px;
@@ -80,9 +125,86 @@
 // モーダル
 // ===========================================
 
+.overRay {
+  @include mq(lg) {
+    background: rgba(255, 255, 255, .85);
+    height: 100vh;
+    position: fixed;
+    left: 100%;
+    top: -100%;
+    transition: all .6s;
+    width: 100%;
+    z-index: 1;
+    &.active {
+    left: 0;
+    top: 0;
+    transition: all .6s;
+    }
+  }
+}
+
 // ===========================================
 // サイドバー（プロフィール側）
 // ===========================================
+
+// ===========================================
+// メニュートリガー
+// ===========================================
+
+.menu-trigger {
+  display: none;
+
+  @include mq(lg) {
+    display: inline-block;
+  }
+
+  box-sizing: border-box;
+  height: 32px;
+  position: relative;
+  transition: all .4s;
+  width: 40px;
+  z-index: 3;
+
+  &__bar {
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    transition: all .4s;
+    width: 100%;
+    z-index: 2;
+
+    &:nth-of-type(1) {
+      top: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 14px;
+    }
+
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+
+  &.active .menu-trigger__bar {
+    background: #000;
+    &:nth-of-type(1) {
+      transform: translateY(12px) rotate(-45deg);
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:nth-of-type(3) {
+      transform: translateY(-15px) rotate(45deg);
+    }
+  }
+}
  
 
 // ===========================================
@@ -103,7 +225,8 @@
 // フッター
 // ===========================================
 .footer {
-  background: #ccc;
+  background: $color_main;
+  color: #fff;
   height: 65px;
   line-height: 65px;
   text-align: center;

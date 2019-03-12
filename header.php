@@ -1,5 +1,7 @@
 <header class="globalNav">
-  <h3 class="header-logo"><a href="index.php">記事投稿サイト</a></h3>
+  <a href="index.php" class="logo-link">記事投稿サイト</a>
+
+  <div class="overRay js-toggle-bg"></div>
 
   <div class="menu-group">
     <?php if (basename($_SERVER['PHP_SELF']) == 'index.php'){ ?>
@@ -8,7 +10,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
     <?php } ?>
-    <ul class="menu">
+    <ul class="menu js-toggle-target">
       <?php if (empty($_SESSION['user_id'])){ ?>
       <li class="menu-item"><a href="signup.php" class="menu-link">サインイン</a></li>
       <li class="menu-item"><a href="login.php" class="menu-link">ログイン</a></li>
@@ -18,4 +20,11 @@
       <?php } ?>
     </ul>
   </div>
+
+  <div class="menu-trigger js-toggle-sp-menu">
+    <span class="menu-trigger__bar"></span>
+    <span class="menu-trigger__bar"></span>
+    <span class="menu-trigger__bar"></span>
+  </div>
+
 </header>

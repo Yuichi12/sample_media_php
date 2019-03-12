@@ -61,7 +61,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 
   <div class="container mt-4">
     <div class="row">
-      <aside class="col-md-3">
+      <aside class="col-lg-3 mb-4">
         <form action="" method="get">
           <ul class="list-group">
             <li class="list-group-item">
@@ -90,7 +90,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
       </aside>
 
 
-      <ul class="list-unstyled col-md-6">
+      <ul class="list-unstyled col-lg-6">
         <?php if (!empty($dbPostDataList['data'])){ ?>
         <?php foreach ($dbPostDataList['data'] as $key => $val){ ?>
         <a href="postDetail.php<?php echo sanitize((!empty(appendGetParam())) ? appendGetParam() . '&p_id=' . $val['post_id'] : '?p_id=' . $val['post_id']); ?>" class="media mb-5">

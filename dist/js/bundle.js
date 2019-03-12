@@ -10724,12 +10724,38 @@ function modal() {
 module.exports = modal;
 
 },{"jquery":1}],8:[function(require,module,exports){
+var $ = require('jquery');
+
+function toggleMenu() {
+  $(function(){
+
+    var $trigger = $('.js-toggle-sp-menu');
+    var $menuLink = $('.js-menu-link');
+    var $toggleBg = $('.js-toggle-bg');
+    var $toggleTarget = $('.js-toggle-target');
+
+    $trigger.on('click', function(){
+      $trigger.toggleClass('active');
+      $toggleBg.toggleClass('active');
+      $toggleTarget.toggleClass('active');
+    });
+    $menuLink.on('click', function(){
+      $trigger.toggleClass('active');
+      $toggleBg.toggleClass('active');
+      $toggleTarget.toggleClass('active');
+    });
+  });
+};
+
+module.exports = toggleMenu;
+},{"jquery":1}],9:[function(require,module,exports){
 var ajaxzip3 = require('./js/ajaxzip3');
 var count = require('./js/count');
 var fixFooter = require('./js/fixFooter');
 var imgPrev = require('./js/imgPrev');
 var modal = require('./js/modal');
 var favorite = require('./js/ajaxFavorite');
+var toggleMenu = require('./js/toggleMenu');
 
 ajaxzip3();
 count();
@@ -10737,5 +10763,6 @@ fixFooter();
 imgPrev();
 modal();
 favorite();
+toggleMenu();
 
-},{"./js/ajaxFavorite":2,"./js/ajaxzip3":3,"./js/count":4,"./js/fixFooter":5,"./js/imgPrev":6,"./js/modal":7}]},{},[8]);
+},{"./js/ajaxFavorite":2,"./js/ajaxzip3":3,"./js/count":4,"./js/fixFooter":5,"./js/imgPrev":6,"./js/modal":7,"./js/toggleMenu":8}]},{},[9]);
