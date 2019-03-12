@@ -112,6 +112,8 @@
 // コンテナー
 // ===========================================
 .container {
+  padding-bottom: $space_3l;
+  padding-top: $space_3l;
   &-title {
     margin-top: 70px;
     text-align: center;
