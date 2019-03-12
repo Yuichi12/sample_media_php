@@ -277,12 +277,20 @@
   position: relative;
   text-align: center;
   width: 400px;
+  @include mq(md){
+    height: 156px;
+    width: 250px;
+  }
 
   &.avatar {
     border-radius: 50%;
     height: 250px;
     line-height: 250px;
     width: 250px;
+    @include mq(md){
+      height: 150px;
+      width: 150px;
+    }
 
     .prev-img {
       border-radius: 50%;

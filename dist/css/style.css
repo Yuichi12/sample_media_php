@@ -9834,11 +9834,25 @@ img {
   width: 400px;
 }
 
+@media screen and (max-width: 768px) {
+  .area-drop {
+    height: 156px;
+    width: 250px;
+  }
+}
+
 .area-drop.avatar {
   border-radius: 50%;
   height: 250px;
   line-height: 250px;
   width: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  .area-drop.avatar {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .area-drop.avatar .prev-img {
