@@ -129,11 +129,13 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
           <div class="avatar-wrapper">
             <img src="<?php echo sanitize(showImg($partnerUserInfo['pic1'])); ?>" alt="" class="avatar">
           </div>
-          <p class="msg-inrTxt">
+          <div class="row">
+          <p class="msg-inrTxt col-md-9">
             <?php echo sanitize($val['message']); ?>
           </p>
-          <div class="msg-date">
+          <div class="msg-date col-md-3">
             <?php echo sanitize($val['send_date']); ?>
+          </div>
           </div>
         </div><!-- msg-left -->
         <?php } else{ ?>
@@ -142,10 +144,10 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
             <img src="<?php echo sanitize(showImg($myUserInfo['pic1'])); ?>" alt="" class="avatar">
           </div>
           <div class="row">
-          <p class="msg-inrTxt col-md-3">
+          <p class="msg-inrTxt col-md-9">
             <?php echo sanitize($val['message']); ?>
           </p>
-          <div class="msg-date col-md-9">
+          <div class="msg-date col-md-3">
             <?php echo sanitize($val['send_date']); ?>
           </div>
           </div>
