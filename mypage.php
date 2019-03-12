@@ -65,12 +65,9 @@ debug('取得した一覧記事の中身:' . print_r($dbPostDataList, true));
         </a>
         <?php } ?>
         <?php } ?>
-      </div><!-- col -->
 
-      <?php require('sidebar.php'); ?>
-    </div><!-- row -->
-    <?php $pageNum = pagination2($currentPageNum, $dbPostDataList['total_page']); ?>
-    <nav aria-label="Page navigation">
+        <?php $pageNum = pagination2($currentPageNum, $dbPostDataList['total_page']); ?>
+    <nav aria-label="Page navigation mb-4">
       <ul class="pagination justify-content-center">
         <?php if ($currentPageNum != 1){ ?>
         <li class="page-item">
@@ -94,6 +91,11 @@ debug('取得した一覧記事の中身:' . print_r($dbPostDataList, true));
         <?php } ?>
       </ul>
     </nav>
+      </div><!-- col -->
+
+      <?php require('sidebar.php'); ?>
+    </div><!-- row -->
+    
   </div><!-- contianer -->
 
   <?php require('footer.php'); ?>

@@ -1,4 +1,4 @@
-<aside class="col-md-3">
+<aside class="col-md-3 mb-4">
   <div class="list-group">
     <a href="registPost.php" class="list-group-item list-group-item-action">
       記事を投稿する
