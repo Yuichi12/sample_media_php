@@ -9580,7 +9580,9 @@ img {
   padding-left: 4rem;
   padding-right: 4rem;
   padding-top: 7px;
+  position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -9675,6 +9677,10 @@ img {
 
 .profBar-name {
   margin-left: 200px;
+}
+
+.profBar.sticky-top {
+  z-index: 0;
 }
 
 .container {
