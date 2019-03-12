@@ -29,7 +29,7 @@
   padding-top: 7px;
   position: relative;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   @include mq(md){
     padding-left: $space_m;
     padding-right: $space_m;
