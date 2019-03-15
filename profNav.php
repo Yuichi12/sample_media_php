@@ -7,7 +7,7 @@
     <?php echo sanitize($userData['user_name']); ?>
   </h5>
   <?php if ($_SESSION['user_id'] !== $u_id){ ?>
-  <form action="" method="post"><button type="submit" name="submit" value="submit">メッセージ</button></form>
+  <form action="" method="post" class="profNav-btn"><button type="submit" name="submit" value="submit">メッセージ</button></form>
   <?php } ?>
   <div class="profBar-favorite"><?php  ?></div>
 </nav>

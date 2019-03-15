@@ -9736,6 +9736,13 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .profNav-btn {
+    position: relative;
+    left: 200px;
+  }
+}
+
 .menu-trigger {
   display: none;
   box-sizing: border-box;
